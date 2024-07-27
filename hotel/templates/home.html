@@ -1,0 +1,161 @@
+<!doctype html>
+{% extends "base1.html" %}
+{%load static%}
+
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<br><br>
+ </section>
+  <section class="testimonial">
+    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <img class="testimonial-image" src="{% static "images/h2.jpg" %}" alt="p1" height="400px" width="100%">
+ <div class="carousel-caption">
+          <h3>Relax and Enjoy your Vacation</h3>
+
+        </div>
+        </div>
+        <div class="carousel-item container-fluid">
+          <img class="testimonial-image" src="{% static "images/h5.jpg" %}" alt="p2" height="400px" width="100%">
+        </div>
+		<div class="carousel-item container-fluid">
+          <img class="testimonial-image" src="{% static "images/h6.jpg" %}" alt="p3" height="400px" width="100%">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+</section>
+<section id="rooms">
+<h1>Our Rooms</h1>
+<hr>
+<br>
+<br>
+    <div class="row">
+      <div class="rooms-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+
+	      <img class="rooms-image" src="{% static "images/h9.jpg" %}" alt="p1" height="200px" width="300px">
+          </div>
+          <div class="card-body">
+	     <h2>Standard Rooms</h2>
+		 <p>$150.00 / per night</p>
+          </div>
+        </div>
+      </div>
+
+        <div class="rooms-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+
+	      <img class="rooms-image" src="{% static "images/h8.jpg" %}" alt="p1" height="200px" width="300px">
+          </div>
+          <div class="card-body">
+	     <h2>Family Rooms</h2>
+		 <p>$200.00 / per night</p>
+          </div>
+        </div>
+      </div>
+
+	     <div class="rooms-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+
+	      <img class="rooms-image" src="{% static "images/h3.jpg" %}" alt="p1" height="200px" width="300px">
+          </div>
+          <div class="card-body">
+	     <h2>Single Rooms</h2>
+		 <p>$155.00 / per night</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>
+
+ <section id="amenties">
+ <h1>Hotel Ameneties</h1>
+<hr>
+
+
+<h2>“Customers love  our
+  facilities”</h2>
+<h4>A MEMORABLE HOLIDAY</h4>
+<p>A great stay in a
+lovely hotel.</p>
+<br>
+<br>
+<div class="row">
+<div class="amenties-gap col-4">
+<img class="amenties-image" src="{% static "images/h12.jpg" %}" alt="p1" height="200px" width="300px">
+<p>Pool Side</p>
+</div>
+<div class="amenties-gap col-4">
+<img class="amenties-image" src="{% static "images/h10.jpg" %}" alt="p1" height="200px" width="300px">
+<p>Restaurant</p>
+</div>
+<div class="amenties-gap col-4">
+<img class="amenties-image" src="{% static "images/h15.jpg" %}" alt="p1" height="200px" width="300px">
+<p>Spa & Sauna</p>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="amenties-gap col-4">
+<img class="amenties-image" src="{% static "images/h11.jpg" %}" alt="p1" height="200px" width="300px">
+<p>Fitness Area</p>
+</div>
+<div class="amenties-gap col-4">
+<img class="amenties-image" src="{% static "images/h4.jpg" %}" alt="p1" height="200px" width="300px">
+<p>Room View</p>
+</div>
+<div class="amenties-gap col-4">
+<img class="amenties-image" src="{% static "images/h14.jpg" %}" alt="p1" height="200px" width="300px">
+<p>Free Diving</p>
+</div>
+</div>
+ </section>
+<section id="about">
+<h1>About OceanView</h1>
+<hr>
+    <div class="about-row">
+      <img class="xyz" src="{% static "images/h5.jpg" %}" alt="pic">
+      <h3>A Luxurious Hotel with Beautiful Nature</h3>
+      <p class="pa1">A beautiful, peaceful, luxurious OceanView Hotel. Most Stunning Hotel Room Views in the World. Stay in the luxurious hotel with jacuzzi and fireplace! Observe the night sky in amazing nature hotel!</p>
+    </div>
+    <div class="about-row">
+      <img class="pqr" src="{% static "images/h5.jpg" %}" alt="pic">
+      <h3>Best Services</h3>
+      <p class="pa2">We Serve Fresh and Delicious Food.Butlers, free babysitting and complimentary foot massages by the pool: Travel + Leisure readers ranked the hotels that won their loyalty.</p>
+    </div>
+  </div>
+</section>
+<section id="contact">
+<p>Puri near Jagannath temple,
+Odisha</p>
+    <p>7777777654</p>
+<p>ochotel200@gmail.com</p>
+  <footer id="footer">
+<i class="social-icon fab fa-facebook" aria-hidden="true"></i>
+	<i class="social-icon fab fa-instagram" aria-hidden="true"></i>
+	<i class="social-icon fab fa-twitter" aria-hidden="true"></i>
+	<i class="social-icon fa fa-envelope" aria-hidden="true"></i>
+    <p>© Copyright 2024 </p>
+
+  </footer>
+
+</section>
+
+
+{% endblock %}

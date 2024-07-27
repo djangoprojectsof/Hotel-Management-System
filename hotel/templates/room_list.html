@@ -1,0 +1,27 @@
+<!doctype html>
+{% extends 'base1.html' %}
+
+
+
+{% block content %}
+<br><br>
+    <h1>Room List</h1>
+    <table border="2" >
+        <thead>
+            <tr>
+                <th>Room ID</th>
+                <th>Room Name</th>
+                <th>Default Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for room in rooms %}
+            <tr>
+                <td>{{ room.id }}</td>
+                <td>{{ room.name }}</td>
+                <td>{{room.date}}- Default Price: {{ room.default_price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

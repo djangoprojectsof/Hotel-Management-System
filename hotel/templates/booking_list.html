@@ -1,0 +1,34 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+<br><br>
+<div class="container">
+    <h1>Bookings List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Booking ID</th>
+                <th>User</th>
+                <th>Room</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Total Price</th>
+                <th>Bookings</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in bookings %}
+            <tr>
+                <td>{{ booking.id }}</td>
+                <td>{{ booking.user.username }}</td>
+                <td>{{ booking.room.name }}</td>
+                <td>{{ booking.start_date }}</td>
+                <td>{{ booking.end_date }}</td>
+                <td>{{ booking.total_price }}</td>
+                <td>{{ booking.user.username }} booked {{ booking.room.name }} from {{ booking.start_date }} to {{ booking.end_date }} for {{ booking.total_price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

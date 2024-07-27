@@ -1,0 +1,44 @@
+<!doctype html>
+{% extends "base1.html" %}
+
+{% block content %}
+<br><br>
+<div class="container"  >
+<h1>Book Room</h1>
+<form method="post">
+    {% csrf_token %}
+     <div>
+            <label for="id_user">User:</label>
+            <select name="user" id="id_user">
+                {% for user in users %}
+                    <option value="{{ user.id }}">{{ user.username }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="id_room">Room:</label>
+            <select name="room" id="id_room">
+                {% for room in rooms %}
+                    <option value="{{ room.id }}">{{ room.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="id_start_date">Start Date:</label>
+            <input type="date" name="start_date" required id="id_start_date">
+        </div>
+        <div>
+            <label for="id_end_date">End Date:</label>
+            <input type="date" name="end_date" required id="id_end_date">
+        </div>
+        <button type="submit" class="btn btn-primary">Book Room</button>
+</form>
+    <ul>
+    {% for field in form %}
+     {% for error in field.errors%}
+    <li>{{error}}</li>
+    {%endfor%}
+    </ul>
+    {%endfor%}
+</div>
+{% endblock %}

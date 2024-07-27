@@ -1,0 +1,26 @@
+<!doctype html>
+{% extends 'base1.html' %}
+
+
+{% block content %}
+<br><br>
+    <h1>Room Price List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Room Name</th>
+                <th>Date</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for price in prices %}
+            <tr>
+                <td>{{ price.room.name }}</td>
+                <td>{{ price.date }}</td>
+                <td>{{ price.room.name }}-{{ price.date }}: {{ price.price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

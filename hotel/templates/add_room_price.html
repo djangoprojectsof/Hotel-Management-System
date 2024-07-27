@@ -1,0 +1,29 @@
+<!doctype html>
+{% extends "base1.html" %}
+
+{% block content %}
+<br><br>
+<div class="container">
+<h1>Add Room Price</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="id_room">Room:</label>
+            <select name="room" id="id_room">
+                {% for room in rooms %}
+                    <option value="{{ room.id }}">{{ room.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="id_date">Date:</label>
+            <input type="date" name="date" required id="id_date">
+        </div>
+        <div>
+            <label for="id_price">Price:</label>
+            <input type="number" step="0.01" name="price" required id="id_price">
+        </div>
+        <button type="submit" class="btn btn-primary">Add Price</button>
+    </form>
+</div>
+{% endblock %}
